@@ -10,8 +10,11 @@ const SignUp = () => {
 
     const handlerSubmit = (e) => {
         e.preventDefault()
-        if(repassword != password){
-           return swal("Password Not Match", "", "error")
+        if (!name || !password || !email || !repassword) {
+            return swal("Fill the form", "", "error")
+        }
+        if (repassword !== password) {
+            return swal("Password Not Match", "", "error")
         }
         const payload = {
             name,
@@ -27,13 +30,15 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                if (data.status == 'error') {
+                if (data.status === 'error') {
                     swal(data.message, "", "error")
                 } else {
                     swal(data.message, "", "success")
                     history.push('/signin');
                 }
+            })
+            .catch(err => {
+                return swal("Server timeout", "", "error")
             })
     }
     return (
@@ -56,6 +61,7 @@ const SignUp = () => {
                                     id="email"
                                     placeholder="Input your email"
                                     onChange={e => { setEmail(e.target.value) }}
+                                    required
                                 />
                             </div>
                             <div class="mb-3">
@@ -66,6 +72,7 @@ const SignUp = () => {
                                     id="fullname"
                                     placeholder="Input your name"
                                     onChange={e => { setName(e.target.value) }}
+                                    required
                                 />
                             </div>
                             <div class="mb-3">
@@ -76,6 +83,7 @@ const SignUp = () => {
                                     id="password"
                                     placeholder="Input your password"
                                     onChange={e => { setPassword(e.target.value) }}
+                                    required
                                 />
                             </div>
                             <div class="mb-3">
@@ -85,6 +93,7 @@ const SignUp = () => {
                                     id="repassword"
                                     placeholder="Confirm your password"
                                     onChange={e => { setRepassword(e.target.value) }}
+                                    required
                                 />
                             </div>
                             <button type="submit" class="btn bg-pink text-white">Sign Up</button>

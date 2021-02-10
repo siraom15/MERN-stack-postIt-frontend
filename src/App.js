@@ -24,7 +24,7 @@ function App() {
     <div className="container">
       <Router >
         <div className="container">
-        <Navbar />
+          <Navbar />
         </div>
         <div className="container mt-2">
           <Switch>
@@ -36,9 +36,6 @@ function App() {
             </Route>
             <Route path="/profile">
               <Profile />
-            </Route>
-            <Route path="/test">
-              <div>test</div>
             </Route>
             <Route path="/">
               <Home />
