@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 // import bootstrap
@@ -16,6 +15,8 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/screen/Home';
 import SignUp from './components/screen/SignUp';
+import SignIn from './components/screen/SignIn';
+import Profile from './components/screen/Profile';
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
           <Switch>
             <Route path="/signup">
               <SignUp />
+            </Route>
+            <Route path="/signin">
+              <SignIn />
+            </Route>
+            <Route path="/profile">
+              <Profile />
             </Route>
             <Route path="/test">
               <div>test</div>

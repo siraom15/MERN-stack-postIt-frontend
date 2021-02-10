@@ -5,7 +5,7 @@ const SignUp = () => {
         <>
             <div className="row mt-5 p-5">
                 <div className="col-sm-12 col-md-4 col-lg-6">
-                    <div className="display-4">
+                    <div className="display-6">
                         Sign Up
                         <hr/>
                     </div>
@@ -30,7 +30,7 @@ const SignUp = () => {
                                     <label for="repassword" class="form-label">Confirm Password</label>
                                     <input type="password" class="form-control" id="repassword" placeholder="Confirm your password" />
                                 </div>
-                                <button type="submit" class="btn bg-pink text-white">Submit</button>
+                                <button type="submit" class="btn bg-pink text-white">Sign Up</button>
                             </form>
 
                         </div>
