@@ -9,6 +9,7 @@ import {
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 
 // import components
@@ -22,8 +23,10 @@ function App() {
   return (
     <div className="container">
       <Router >
-        <Navbar />
         <div className="container">
+        <Navbar />
+        </div>
+        <div className="container mt-2">
           <Switch>
             <Route path="/signup">
               <SignUp />

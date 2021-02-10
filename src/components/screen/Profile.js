@@ -1,4 +1,5 @@
 import React from 'react';
+import Post from '../Post/Post';
 
 const Profile = () => {
     return (
@@ -38,13 +39,7 @@ const Profile = () => {
                         </div>
                         <div className="row">
                             <div className="col-4">
-                                <div className="card">
-                                    <img src="assets/images/user1.jpeg" width="20%" className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Fullname</h5>
-                                        <p className="card-text text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
+                                <Post />
                             </div>
                         </div>
 

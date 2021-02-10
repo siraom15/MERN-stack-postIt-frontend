@@ -1,8 +1,10 @@
 import React from 'react';
+import Post from '../Post/Post'
 const Home = () =>{
     return(
-        <h1>Home!!!1</h1>
-
+        <div className="container">
+            <Post />
+        </div>
     )
 } 
 export default Home;
