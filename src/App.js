@@ -18,6 +18,8 @@ import Home from './components/screen/Home';
 import SignUp from './components/screen/SignUp';
 import SignIn from './components/screen/SignIn';
 import Profile from './components/screen/Profile';
+import IsLoggedIn from './components/screen/IsLoggedIn';
+import CreatePost from './components/screen/CreatePost';
 
 function App() {
   return (
@@ -36,6 +38,12 @@ function App() {
             </Route>
             <Route path="/profile">
               <Profile />
+            </Route>
+            <Route path="/isLoggedIn">
+              <IsLoggedIn />
+            </Route>
+            <Route path="/createpost" >
+              <CreatePost />
             </Route>
             <Route path="/">
               <Home />
